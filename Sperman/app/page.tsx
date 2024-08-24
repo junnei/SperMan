@@ -115,6 +115,7 @@ export default function Home() {
             title={post.title}
             subtitle={post.subtitle}
             description={post.description}
+            link="/search"
             is_new={post.is_new}
           />
         ))}

@@ -10,8 +10,15 @@
     width: 320px; /* 카드의 최대 너비 설정 */
     height: 120px;
     margin: 0;
-  }
-  
+    transition: transform 0.2s ease-in-out;
+}
+
+.card:hover{
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    background-color: rgb(243 244 246);
+    transform: scale(1.02); /* 호버 시 확대 효과 */
+}
+
 .newBadge {
     position: absolute;
     top: 6px;
