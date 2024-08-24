@@ -1,6 +1,7 @@
 import * as React from "react";
 
 import { IconSvgProps } from "@/types";
+import { Icon } from "next/dist/lib/metadata/types/metadata-types";
 
 export const Logo: React.FC<IconSvgProps> = ({
   size = 36,
@@ -65,6 +66,83 @@ export const TwitterIcon: React.FC<IconSvgProps> = ({
     </svg>
   );
 };
+
+export const WindowViewIcon: React.FC<IconSvgProps> = ({
+  size = 24,
+  width,
+  height,
+  ...props
+}) => {
+  return (
+    <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="1" y="1" width="24" height="24" stroke="#878D96"/>
+<rect x="5" y="5" width="7" height="7" fill="#4D5358"/>
+<rect x="5" y="14" width="7" height="7" fill="#4D5358"/>
+<rect x="14" y="5" width="7" height="7" fill="#4D5358"/>
+<rect x="14" y="14" width="7" height="7" fill="#4D5358"/>
+</svg>
+  )
+}
+
+export const WideViewIcon: React.FC<IconSvgProps> = ({
+  size = 24,
+  width,
+  height,
+  ...props
+}) => {
+  return (
+    <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="1" y="1" width="24" height="24" stroke="#878D96"/>
+<rect x="8" y="8" width="10" height="10" fill="#4D5358"/>
+</svg>
+  )
+}
+
+export const SearchIcon: React.FC<IconSvgProps> = ({
+  size = 24,
+  width,
+  height,
+  ...props
+}) => {
+  return (
+    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M16.5 16.5L12.875 12.875M14.8333 8.16667C14.8333 11.8486 11.8486 14.8333 8.16667 14.8333C4.48477 14.8333 1.5 11.8486 1.5 8.16667C1.5 4.48477 4.48477 1.5 8.16667 1.5C11.8486 1.5 14.8333 4.48477 14.8333 8.16667Z" stroke="#4D5358" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+</svg>
+  )
+}
+
+
+export const PersonIcon: React.FC<IconSvgProps> = ({
+  size = 24,
+  width,
+  height,
+  ...props
+}) => {
+  return (
+    <svg
+      width="16"
+      height="18"
+      viewBox="0 0 16 18"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M7.99999 11.5C5.35826 11.5 3.00899 12.7755 1.51332 14.755C1.19141 15.181 1.03046 15.394 1.03572 15.6819C1.03979 15.9043 1.17946 16.1849 1.35446 16.3222C1.58098 16.5 1.89488 16.5 2.52269 16.5H13.4773C14.1051 16.5 14.419 16.5 14.6455 16.3222C14.8205 16.1849 14.9602 15.9043 14.9643 15.6819C14.9695 15.394 14.8086 15.181 14.4867 14.755C12.991 12.7755 10.6417 11.5 7.99999 11.5Z"
+        stroke="#4D5358"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M7.99999 9C10.0711 9 11.75 7.32107 11.75 5.25C11.75 3.17893 10.0711 1.5 7.99999 1.5C5.92893 1.5 4.24999 3.17893 4.24999 5.25C4.24999 7.32107 5.92893 9 7.99999 9Z"
+        stroke="#4D5358"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  )
+}
 
 export const GithubIcon: React.FC<IconSvgProps> = ({
   size = 24,
@@ -158,7 +236,7 @@ export const HeartFilledIcon = ({
   </svg>
 );
 
-export const SearchIcon = (props: IconSvgProps) => (
+export const PreSearchIcon = (props: IconSvgProps) => (
   <svg
     aria-hidden="true"
     fill="none"
