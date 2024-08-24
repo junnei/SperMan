@@ -7,11 +7,13 @@ interface PostCardProps {
   title: string;
   subtitle: string;
   description: string;
+  is_new?: boolean;
 }
 
-const PostCard: React.FC<PostCardProps> = ({ image, title, subtitle, description }) => {
+const PostCard: React.FC<PostCardProps> = ({ image, title, subtitle, description, is_new }) => {
   return (
     <div className={styles.card}>
+      {is_new && <span className={styles.newBadge}>NEW</span>}
       <img src={image} alt={title} className={styles.image} />
       <div className={styles.content}>
         <h2 className={styles.title}>{title}</h2>

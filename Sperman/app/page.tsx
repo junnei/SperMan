@@ -24,27 +24,43 @@ interface Post {
   title: string;
   subtitle: string;
   description: string;
+  is_new?: boolean; 
 }
 
 export default function Home() {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggleDropdown = () => {
-    setIsOpen(!isOpen);
-  };
-
+  
   const posts: Post[] = [
     {
-      image: 'https://via.placeholder.com/400',
-      title: '첫 번째 게시글',
-      subtitle: '게시글의 부제목',
-      description: '이것은 첫 번째 게시글의 설명입니다. 이 곳에 게시글의 내용을 요약하여 표시할 수 있습니다.',
+      image: 'image1.png',
+      title: 'SP-240824-005',
+      subtitle: 'Artistic Entrepreneur',
+      description: '6’ - Brown Eyes - Dark Brown Hair',
+      is_new: true,
     },
     {
-      image: 'https://via.placeholder.com/400',
-      title: '두 번째 게시글',
-      subtitle: '또 다른 부제목',
-      description: '여기에 두 번째 게시글의 설명이 들어갑니다. 게시글의 내용을 간략하게 표현할 수 있습니다.',
+      image: 'image2.png',
+      title: 'SP-240824-004',
+      subtitle: 'Sports & Psych Pro',
+      description: '6’3” - Hazel Eyes - Dark Brown Hair',
+      is_new: true,
+    },
+    {
+      image: 'image3.png',
+      title: 'SP-240824-003',
+      subtitle: 'Dancing Double PH.D.',
+      description: '5’9 - Brown Eyes - Dark Brown Hair',
+    },
+    {
+      image: 'image4.png',
+      title: 'SP-240824-002',
+      subtitle: 'Artistic Entrepreneur',
+      description: '6’2” - Blue Eyes - Blond Hair',
+    },
+    {
+      image: 'image5.png',
+      title: 'SP-240824-001',
+      subtitle: 'Animal loving Engineer',
+      description: '5’11 - Black Eyes - Dark Brown Hair',
     },
   ];
 
@@ -91,7 +107,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '20px' }}>
+      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '5px' }}>
         {posts.map((post, index) => (
           <PostCard
             key={index}
@@ -99,51 +115,11 @@ export default function Home() {
             title={post.title}
             subtitle={post.subtitle}
             description={post.description}
+            is_new={post.is_new}
           />
         ))}
       </div>
 
-      <div className="inline-block max-w-xl text-center justify-center">
-        <h1 className={title()}>Make&nbsp;</h1>
-        <h1 className={title({ color: "violet" })}>beautiful&nbsp;</h1>
-        <br />
-        <h1 className={title()}>
-          websites regardless of your design experience.
-        </h1>
-        <h2 className={subtitle({ class: "mt-4" })}>
-          Beautiful, fast and modern React UI library.
-        </h2>
-      </div>
-
-      <div className="flex gap-3">
-        <Link
-          isExternal
-          className={buttonStyles({
-            color: "primary",
-            radius: "full",
-            variant: "shadow",
-          })}
-          href={siteConfig.links.docs}
-        >
-          Documentation
-        </Link>
-        <Link
-          isExternal
-          className={buttonStyles({ variant: "bordered", radius: "full" })}
-          href={siteConfig.links.github}
-        >
-          <GithubIcon size={20} />
-          GitHub
-        </Link>
-      </div>
-
-      <div className="mt-8">
-        <Snippet hideCopyButton hideSymbol variant="bordered">
-          <span>
-            Get started by editing <Code color="primary">app/page.tsx</Code>
-          </span>
-        </Snippet>
-      </div>
     </section>
   );
 }
