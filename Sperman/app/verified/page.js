@@ -1,9 +1,13 @@
 "use client"
 
 import { LuBadgeCheck } from "react-icons/lu";
-
+import { useRouter } from 'next/navigation';
 const VertifiedPage = () => {
+    const router = useRouter();
 
+    const handleContinueClick = () => {
+        router.push('/'); // Navigate to the loading page
+    };
 
     return (
         <div className='h-full p-4'>
@@ -13,7 +17,9 @@ const VertifiedPage = () => {
                 <p>You have completed all validation processes!</p>
             </div>
 
-            <button className='w-full text-center mt-8 bg-purple-500 text-white px-4 py-2 rounded-lg'>
+            <button
+                onClick={handleContinueClick}
+                className='w-full text-center mt-8 bg-purple-500 text-white px-4 py-2 rounded-lg'>
                 Continue
             </button>
         </div>

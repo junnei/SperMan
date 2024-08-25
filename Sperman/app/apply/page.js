@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
-import React from 'react'
+import React from 'react';
 import Image from 'next/image';
-import { useRouter } from 'next/navigation';
+import { useRouter } from 'next/navigation'; // Ensure correct import path
 import { CgSmileMouthOpen } from "react-icons/cg";
 import { BiSolidVial } from "react-icons/bi";
 import { CiMedicalCross } from "react-icons/ci";
@@ -14,6 +14,7 @@ const ApplyPage = () => {
     const handleApplyClick = () => {
         router.push('/loading'); // Navigate to the loading page
     };
+
     return (
         <div className='p-4'>
             <div className='relative'>
@@ -31,25 +32,24 @@ const ApplyPage = () => {
             </div>
             <div className='space-y-4'>
                 <h1 className='text-2xl'>Why be a sperm donor?</h1>
-                <p className='text-base'>Benefits of donating sperm with sperman</p>
-                <div className='flex felx-row'>
+                <p className='text-base'>Benefits of donating sperm with Sperman</p>
+                <div className='flex flex-row'>
                     <CgSmileMouthOpen size="50" />
                     <p>Be a force for good and help families in need around the globe as a sperm donor!</p>
                 </div>
-                <div className='flex felx-row'>
+                <div className='flex flex-row'>
                     <BiSolidVial size="50" />
                     <p>Earn generous sperm donor compensation, up to $4000 over 6 months.</p>
                 </div>
-                <div className='flex felx-row pb-4'>
+                <div className='flex flex-row pb-4'>
                     <CiMedicalCross size="50" />
                     <p>Receive health screenings and exams at no-cost to you.</p>
                 </div>
             </div>
 
-
             <div className='space-y-4'>
                 <h1 className='text-2xl'>Sperm Donor Qualifications?</h1>
-                <div className='flex felx-row'>
+                <div className='flex flex-row'>
                     <LuBadgeCheck size="24" />
                     <p>18-39 years old male</p>
                 </div>
@@ -63,12 +63,11 @@ const ApplyPage = () => {
                 </div>
                 <div className='flex flex-row'>
                     <LuBadgeCheck size="24" />
-                    <p> Legally able to work in the US</p>
+                    <p>Legally able to work in the US</p>
                 </div>
             </div>
-
         </div>
-    )
+    );
 }
 
-export default ApplyPage
+export default ApplyPage;
