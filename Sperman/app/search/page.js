@@ -29,7 +29,7 @@ const eyeColors = {
     Black: "black",
 };
 
-export default function SortPage() {
+export default function SearchPage() {
     const [selectedKeys, setSelectedKeys] = React.useState(new Set(["1"]));
 
     const router = useRouter();

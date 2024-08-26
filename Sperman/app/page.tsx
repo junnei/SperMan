@@ -16,6 +16,7 @@ import {
 import { Kbd } from "@nextui-org/kbd";
 import { Input } from "@nextui-org/input";
 
+import { useRouter } from 'next/navigation';
 import PostCard from '@/components/postcard';
 import { useState } from 'react';
 
@@ -63,10 +64,16 @@ export default function Home() {
       description: '5’11 - Black Eyes - Dark Brown Hair',
     },
   ];
+  const router = useRouter();
+
+  const handleClick = () => {
+    router.push('/search'); // 클릭 시 지정된 링크로 이동
+  };
 
   const searchInput = (
     <Input
       aria-label="Search"
+      onClick={handleClick}
       classNames={{
         inputWrapper: "bg-default-100",
         input: "text-sm",
@@ -115,7 +122,7 @@ export default function Home() {
             title={post.title}
             subtitle={post.subtitle}
             description={post.description}
-            link="/search"
+            link="/detail"
             is_new={post.is_new}
           />
         ))}
